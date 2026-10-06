@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شاهين شوب | shahin-shub - خدمات الشحن السريع</title>
+    <!-- استيراد خط عربي جميل (Cairo) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <!-- مكتبة الأيقونات FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 2px solid #334155;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            color: #38bdf8;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.1rem;
+            color: #94a3b8;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: #e2e8f0;
+            position: relative;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+        .service-card {
+            background-color: #1e293b;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            border: 1px solid #334155;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: #38bdf8;
+        }
+        .service-card i {
+            font-size: 2.5rem;
+            color: #38bdf8;
+            margin-bottom: 15px;
+        }
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+        .service-card p {
+            color: #94a3b8;
+            font-size: 0.95rem;
+        }
+        .contact-section {
+            background-color: #1e293b;
+            padding: 40px;
+            border-radius: 16px;
+            text-align: center;
+            border: 1px solid #334155;
+            margin-bottom: 50px;
+        }
+        .contact-section p {
+            color: #94a3b8;
+            margin-bottom: 25px;
+        }
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: opacity 0.3s;
+            color: #fff;
+        }
+        .btn:hover {
+            opacity: 0.9;
+        }
+        .btn-whatsapp {
+            background-color: #25d366;
+        }
+        .btn-telegram {
+            background-color: #0088cc;
+        }
+        .btn-phone {
+            background-color: #10b981;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #64748b;
+            border-top: 1px solid #1e293b;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>شاهين شوب | shahin-shub</h1>
+        <p>وجهتك الآمنة والمضمونة لشحن الألعاب، البرامج، العملات الرقمية ورصيد الخطوط في سوريا</p>
+    </header>
+
+    <div class="container">
+        <h2 class="section-title">خدماتنا المميزة</h2>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fa-solid fa-gamepad"></i>
+                <h3>شحن الألعاب</h3>
+                <p>شحن شدات ببجي موبايل، جواهر فري فاير، وجميع الألعاب الإلكترونية بسرعة وبأفضل الأسعار.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+                <h3>رصيد وخطوط الاتصال</h3>
+                <p>تعبئة رصيد وبطاقات الشحن لخطوط سيريتل (Syriatel) و MTN في سوريا بكل فئاتها.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fa-solid fa-laptop-code"></i>
+                <h3>البرامج والتطبيقات</h3>
+                <p>تفعيل وشحن البرامج والتطبيقات المدفوعة وحسابات البث والخدمات الرقمية.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fa-solid fa-coins"></i>
+                <h3>العملات الرقمية</h3>
+                <p>خدمات شراء وتأمين العملات الرقمية بطرق آمنة وموثوقة وسريعة التنفيذ.</p>
+            </div>
+        </div>
+
+        <div class="contact-section">
+            <h2 class="section-title" style="margin-bottom: 15px;">تواصل معنا للطلب</h2>
+            <p>للحصول على الخدمة فوراً أو الاستفسار عن الأسعار، يسعدنا تواصلكم معنا عبر الوسائل التالية:</p>
+            
+            <div class="contact-buttons">
+                <!-- تذكير: استبدل الأرقام والمعرفات أدناه بمعلومات صديقك الحقيقية -->
+                <a href="https://wa.me/963000000000" target="_blank" class="btn btn-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> مراسلة واتساب
+                </a>
+                <a href="https://t.me/YourUsername" target="_blank" class="btn btn-telegram">
+                    <i class="fa-brands fa-telegram"></i> معرف تيليجرام
+                </a>
+                <a href="tel:+963000000000" class="btn btn-phone">
+                    <i class="fa-solid fa-phone"></i> اتصال مباشر
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        جميع الحقوق محفوظة &copy; 2026 - شاهين شوب | shahin-shub
+    </footer>
+
+</body>
+</html>
