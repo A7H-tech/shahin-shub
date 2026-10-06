@@ -4,127 +4,272 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>شاهين شوب | Shahin-Shub</title>
-    <!-- استيراد الخطوط والأيقونات الحديثة -->
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        :root {
-            --primary: #6366f1;
-            --primary-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
-            --secondary: #0ea5e9;
-            --dark-bg: #0f172a;
-            --card-bg: rgba(30, 41, 59, 0.7);
-            --border-color: rgba(255, 255, 255, 0.1);
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-        }
-
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Tajawal', sans-serif;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             scroll-behavior: smooth;
         }
 
         body {
-            background-color: var(--dark-bg);
-            color: var(--text-main);
+            background-color: #f4f7f6;
+            color: #2c3e50;
             min-height: 100vh;
-            overflow-x: hidden;
-            background-image: 
-                radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
-                radial-gradient(at 100% 100%, rgba(14, 165, 233, 0.15) 0px, transparent 50%);
+            padding: 20px;
         }
 
-        /* حاوية المتجر الرئيسية */
         .store-container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 20px;
         }
 
         /* الهيدر والتعريف بالمتجر */
         header {
             text-align: center;
-            padding: 50px 20px;
-            background: var(--card-bg);
-            backdrop-filter: blur(12px);
-            border: 1px solid var(--border-color);
-            border-radius: 24px;
-            margin-bottom: 40px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-            position: relative;
-            overflow: hidden;
+            padding: 40px 20px;
+            background: #ffffff;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border-bottom: 5px solid #4f46e5;
         }
 
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: var(--primary-gradient);
-        }
-
-        .logo-icon {
-            font-size: 3rem;
-            background: var(--primary-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 15px;
-        }
-
-        h1 {
+        .logo-title {
             font-size: 2.5rem;
-            font-weight: 900;
+            font-weight: 800;
+            color: #4f46e5;
             margin-bottom: 10px;
-            letter-spacing: -1px;
         }
 
         .store-subtitle {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-            max-width: 600px;
+            font-size: 1.05rem;
+            color: #64748b;
+            max-width: 650px;
             margin: 0 auto;
             line-height: 1.6;
         }
 
         /* أقسام الخدمات */
         .section-title {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: 700;
-            margin: 40px 0 20px;
+            margin: 30px 0 15px;
+            color: #1e293b;
             display: flex;
             align-items: center;
-            gap: 12px;
-            color: var(--text-main);
+            gap: 10px;
         }
 
-        .section-title i {
-            color: var(--primary);
+        .section-title span {
+            background: #4f46e5;
+            color: white;
+            width: 32px;
+            height: 32px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 0.9rem;
         }
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
         }
 
         .card {
-            background: var(--card-bg);
-            backdrop-filter: blur(12px);
-            border: 1px solid var(--border-color);
+            background: #ffffff;
             border-radius: 16px;
             padding: 25px;
-            transition: all 0.3s ease;
-            position: relative;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border: 1px solid #e2e8f0;
         }
 
         .card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(99, 102, 241, 0.4);
-            box-shadow: 0 10px 30px rgba(9
-      
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(79, 70, 229, 0.1);
+            border-color: #cbd5e1;
+        }
+
+        .card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: #0f172a;
+        }
+
+        .card p {
+            color: #64748b;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* قسم تواصل معنا */
+        .contact-section {
+            margin-top: 50px;
+            text-align: center;
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 35px 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-section h2 {
+            margin-bottom: 20px;
+            font-size: 1.6rem;
+            color: #1e293b;
+        }
+
+        .buttons-grid {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 28px;
+            border-radius: 10px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: opacity 0.2s ease, transform 0.2s ease;
+            font-size: 1rem;
+            color: white;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+            transform: scale(1.03);
+        }
+
+        .btn-whatsapp {
+            background-color: #25d366;
+        }
+        .btn-telegram {
+            background-color: #0088cc;
+        }
+        .btn-messenger {
+            background-color: #0084ff;
+        }
+
+        /* التذييل */
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="store-container">
+        <!-- الهيدر والتعريف -->
+        <header>
+            <div class="logo-title">شاهين شوب</div>
+            <p class="store-subtitle">
+                Shahin-Shub - وجهتك الأولى والآمنة لشحن الألعاب، تطبيقات الدردشة والتواصل الاجتماعي، البطاقات الرقمية، عملات USDT، وتعبئة رصيد الخطوط المحلية (MTN و سيريتل) بكل سرعة وأمان.
+            </p>
+        </header>
+
+        <!-- الألعاب -->
+        <div class="section-title">
+            <span>🎮</span>
+            <h2>شحن الألعاب الإلكترونية</h2>
+        </div>
+        <div class="grid">
+            <div class="card">
+                <h3>لعبة ببجي موبايل (PUBG)</h3>
+                <p>شحن شدات UC رسمية وآمنة وبأفضل الأسعار مع سرعة في التنفيذ.</p>
+            </div>
+            <div class="card">
+                <h3>لعبة فري فاير (Free Fire)</h3>
+                <p>شحن جواهر فري فاير لمختلف السيرفرات بأسعار تنافسية ومضمونة 100%.</p>
+            </div>
+            <div class="card">
+                <h3>ألعاب أخرى متنوعة</h3>
+                <p>متوفر شحن لمختلف الألعاب الشهيرة أونلاين وبكافة الفئات.</p>
+            </div>
+        </div>
+
+        <!-- تطبيقات الدردشة والتواصل -->
+        <div class="section-title">
+            <span>💬</span>
+            <h2>تطبيقات الدردشة والتواصل الاجتماعي</h2>
+        </div>
+        <div class="grid">
+            <div class="card">
+                <h3>يلا لودو / يلا شات</h3>
+                <p>شحن ذهب وعملات يلا وتفعيل كافة ميزات الغرف الصوتية والشحن الفوري.</p>
+            </div>
+            <div class="card">
+                <h3>تانجو وسول شيل</h3>
+                <p>شحن جواهر برامج البث المباشر والدردشة وتعبئة الحسابات بكل سهولة.</p>
+            </div>
+            <div class="card">
+                <h3>ياهو وباقي التطبيقات</h3>
+                <p>تعبئة وشحن الحسابات والرصيد الرقمي لتطبيقات وبرامج الدردشة الأخرى.</p>
+            </div>
+        </div>
+
+        <!-- البطاقات والعملات الرقمية -->
+        <div class="section-title">
+            <span>💳</span>
+            <h2>البطاقات الرقمية و USDT</h2>
+        </div>
+        <div class="grid">
+            <div class="card">
+                <h3>جوجل بلاي وآب ستور (إيتونز)</h3>
+                <p>بطاقات هدايا متاجر التطبيقات لمختلف الدول والفئات.</p>
+            </div>
+            <div class="card">
+                <h3>بطاقات الألعاب الرقمية</h3>
+                <p>بطاقات ستيم، بلايستيشن، إكس بوكس، ريزر غولد وغيرها.</p>
+            </div>
+            <div class="card">
+                <h3>عملات USDT الرقمية</h3>
+                <p>خدمة بيع وشحن عملات التيذر الرقمية بكل أمان وسرعة.</p>
+            </div>
+        </div>
+
+        <!-- رصيد الخطوط المحلية -->
+        <div class="section-title">
+            <span>📱</span>
+            <h2>شحن رصيد الخطوط المحلية</h2>
+        </div>
+        <div class="grid">
+            <div class="card">
+                <h3>خطوط MTN سوريا</h3>
+                <p>تحويل رصيد وشحن خطوط إم تي إن الفورية بكل سهولة.</p>
+            </div>
+            <div class="card">
+                <h3>خطوط سيريتل (Syriatel)</h3>
+                <p>إرسال رصيد ووحدات لخطوط سيريتل بأفضل أسعار التحويل.</p>
+            </div>
+        </div>
+
+        <!-- أزرار التواصل -->
+        <div class="contact-section">
+            <h2>تواصل معنا للطلب والشحن الفوري</h2>
+            <div class="buttons-grid">
+                <a href="https://wa.me/963000000000" target="_blank" class="btn btn-whatsapp">واتساب</a>
+                <a href="https://t.me/YourTelegramUsername" target="_blank" class="btn btn-telegram">تليجرام</a>
+                <a href="https://m.me/YourFacebookPage" target="_blank" class="btn btn-messenger">ماسنجر</a>
+            </div>
+        </div>
+
+        <!-- التذييل -->
+        <footer>
+            <p>جميع الحقوق محفوظة &copy; 2026 شاهين شوب (Shahin-Shub)</p>
+        </footer>
+    </div>
+
+</body>
+</html>
