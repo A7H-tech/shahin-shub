@@ -1,290 +1,435 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>وكالة الشاهين | Shahin Agency</title>
-    
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            scroll-behavior: smooth;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>وكالة الشاهين - شحن الألعاب والتطبيقات</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
 
-        body {
-            background-color: #f4f7f6;
-            color: #2c3e50;
-            min-height: 100vh;
-            padding: 20px;
-        }
+<style>
+*{
+    box-sizing: border-box;
+}
 
-        .store-container {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
+body{
+    margin:0;
+    font-family: 'Cairo', sans-serif;
+    background:#0b0f19;
+    color:#f8fafc;
+    line-height: 1.4;
+}
 
-        /* الهيدر والصورة الترويجية للمتجر */
-        header {
-            text-align: center;
-            background: #0f172a;
-            border-radius: 20px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            border: 2px solid rgba(212, 175, 55, 0.3);
-        }
+header{
+    background:linear-gradient(135deg, #1e1b4b, #311042);
+    color:white;
+    text-align:center;
+    padding:25px 10px;
+    border-bottom: 2px solid rgba(236, 72, 153, 0.2);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
 
-        .store-banner {
-            width: 100%;
-            max-height: 500px;
-            object-fit: cover;
-            display: block;
-        }
+header h1{
+    margin:0 0 5px;
+    font-size:22px;
+    font-weight: 900;
+    background: linear-gradient(45deg, #60a5fa, #f472b6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
-        .header-text {
-            padding: 20px;
-            color: #ffffff;
-            background: linear-gradient(135deg, #121c2e 0%, #080d1a 100%);
-        }
+header p{
+    margin:0;
+    font-size:12px;
+    color: #94a3b8;
+}
 
-        .logo-title {
-            font-size: 2rem;
-            font-weight: 800;
-            color: #d4af37;
-            margin-bottom: 5px;
-        }
+.container{
+    max-width:1150px;
+    margin:auto;
+    padding:15px 8px;
+}
 
-        .store-subtitle {
-            font-size: 0.95rem;
-            color: #94a3b8;
-            max-width: 650px;
-            margin: 0 auto;
-            line-height: 1.5;
-        }
+.title{
+    text-align:center;
+    margin:5px 0 20px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #f1f5f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
 
-        /* أقسام الخدمات */
-        .section-title {
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin: 30px 0 15px;
-            color: #1e293b;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
+/* شبكة المنتجات: 3 أعمدة ثابتة للموبايل والكمبيوتر */
+.products{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-bottom: 25px;
+}
 
-        .section-title span {
-            background: #4f46e5;
-            color: white;
-            width: 32px;
-            height: 32px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            font-size: 0.9rem;
-        }
+.card{
+    background: #131b2e;
+    border-radius: 12px;
+    padding: 12px 6px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+    border: 1px solid rgba(255,255,255,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
+.card:hover {
+    transform: translateY(-3px);
+    border-color: #ec4899;
+}
 
-        .card {
-            background: #ffffff;
-            border-radius: 16px;
-            padding: 25px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            border: 1px solid #e2e8f0;
-        }
+.icon{
+    font-size: 24px;
+    margin-bottom: 6px;
+    background: rgba(255,255,255,0.03);
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.06);
+}
 
-        .card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(79, 70, 229, 0.1);
-            border-color: #cbd5e1;
-        }
+.card h3{
+    margin: 4px 0 4px;
+    font-size: 13px;
+    color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
-        .card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 8px;
-            color: #0f172a;
-        }
+.card p{
+    color: #94a3b8;
+    font-size: 10px;
+    margin-bottom: 8px;
+    flex-grow: 1;
+    line-height: 1.2;
+}
 
-        .card p {
-            color: #64748b;
-            font-size: 0.95rem;
-            line-height: 1.5;
-        }
+.price{
+    font-size: 10px;
+    font-weight: bold;
+    color: #38bdf8;
+    margin-bottom: 8px;
+    background: rgba(56, 189, 248, 0.08);
+    padding: 3px 4px;
+    border-radius: 6px;
+    display: block;
+    white-space: nowrap;
+}
 
-        /* قسم تواصل معنا */
-        .contact-section {
-            margin-top: 50px;
-            text-align: center;
-            background: #ffffff;
-            border-radius: 20px;
-            padding: 35px 20px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-        }
+.btn{
+    display: block;
+    background: linear-gradient(135deg, #059669, #10b981);
+    color: white;
+    padding: 7px 4px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 11px;
+    box-shadow: 0 2px 8px rgba(16,185,129,0.3);
+    text-align: center;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
 
-        .contact-section h2 {
-            margin-bottom: 20px;
-            font-size: 1.6rem;
-            color: #1e293b;
-        }
+.btn:active {
+    transform: scale(0.97);
+}
 
-        .buttons-grid {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
+.btn i {
+    margin-left: 2px;
+}
 
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 12px 28px;
-            border-radius: 10px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: opacity 0.2s ease, transform 0.2s ease;
-            font-size: 1rem;
-            color: white;
-        }
+.payment{
+    background: #131b2e;
+    margin-top: 20px;
+    padding: 20px 10px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.05);
+}
 
-        .btn:hover {
-            opacity: 0.9;
-            transform: scale(1.03);
-        }
+.payment h2 {
+    margin-top: 0;
+    font-size: 16px;
+    color: #fff;
+}
 
-        .btn-whatsapp {
-            background-color: #25d366;
-        }
-        .btn-telegram {
-            background-color: #0088cc;
-        }
-        .btn-messenger {
-            background-color: #0084ff;
-        }
+.payment-methods {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 12px 0;
+}
 
-        /* التذييل */
-        footer {
-            text-align: center;
-            padding: 30px;
-            color: #64748b;
-            font-size: 0.9rem;
-        }
-    </style>
+.payment span{
+    display: inline-block;
+    padding: 8px 18px;
+    background: #1e293b;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #cbd5e1;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.payment p {
+    color: #94a3b8;
+    font-size: 11px;
+    margin-bottom: 12px;
+}
+
+.contact-center {
+    background: #131b2e;
+    margin-top: 20px;
+    padding: 20px 10px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.contact-center h3 {
+    margin-top: 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.contact-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 12px;
+    color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    transition: opacity 0.2s ease, transform 0.1s ease;
+}
+
+.contact-btn:hover {
+    opacity: 0.9;
+}
+
+.contact-btn:active {
+    transform: scale(0.98);
+}
+
+.telegram { background: #0088cc; }
+.facebook { background: #1877f2; }
+.whatsapp-admin { background: #25d366; }
+.whatsapp-supervisor { background: #128c7e; }
+
+footer{
+    text-align: center;
+    padding: 20px 10px;
+    color: #64748b;
+    font-size: 11px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    margin-top: 30px;
+}
+
+/* media queries لضبط الأحجام للشاشات الأكبر */
+@media (min-width: 768px) {
+    header{ padding: 40px 20px; }
+    header h1{ font-size: 34px; }
+    header p{ font-size: 16px; }
+    .container{ padding: 30px 15px; }
+    .title{ font-size: 26px; }
+    .products{ gap: 18px; }
+    .card{ padding: 20px 12px; border-radius: 16px; }
+    .icon{ width: 65px; height: 65px; font-size: 36px; }
+    .card h3{ font-size: 18px; }
+    .card p{ font-size: 13px; }
+    .price{ font-size: 14px; padding: 5px 8px; }
+    .btn{ font-size: 14px; padding: 10px 12px; }
+    .payment h2{ font-size: 22px; }
+    .payment span{ font-size: 14px; padding: 8px 22px; }
+    .payment p{ font-size: 14px; }
+    .contact-center h3{ font-size: 20px; }
+    .contact-btn{ font-size: 14px; padding: 12px 20px; }
+}
+</style>
 </head>
+
 <body>
 
-    <div class="store-container">
-        <!-- الهيدر مع الصورة الترويجية المضافة -->
-        <header>
-            <img src="1000156970_2.jpg" alt="وكالة الشاهين" class="store-banner">
-            <div class="header-text">
-                <div class="logo-title">وكالة الشاهين</div>
-                <p class="store-subtitle">وجهتك الأولى والآمنة لشحن الألعاب، تطبيقات الدردشة، البطاقات الرقمية، عملات USDT، وتعبئة رصيد الخطوط المحلية.</p>
-            </div>
-        </header>
+<header>
+    <h1>⚡ وكالة الشاهين ⚡</h1>
+    <p>شحن أسرع للألعاب والتطبيقات الرقمية بثقة وأمان</p>
+</header>
 
-        <!-- الألعاب -->
-        <div class="section-title">
-            <span>🎮</span>
-            <h2>شحن الألعاب الإلكترونية</h2>
-        </div>
-        <div class="grid">
-            <div class="card">
-                <h3>لعبة ببجي موبايل (PUBG)</h3>
-                <p>شحن شدات UC رسمية وآمنة وبأفضل الأسعار مع سرعة في التنفيذ.</p>
-            </div>
-            <div class="card">
-                <h3>لعبة فري فاير (Free Fire)</h3>
-                <p>شحن جواهر فري فاير لمختلف السيرفرات بأسعار تنافسية ومضمونة 100%.</p>
-            </div>
-            <div class="card">
-                <h3>ألعاب أخرى متنوعة</h3>
-                <p>متوفر شحن لمختلف الألعاب الشهيرة أونلاين وبكافة الفئات.</p>
-            </div>
+<div class="container">
+
+    <h2 class="title"><i class="fas fa-gamepad" style="color: #f472b6;"></i> خدماتنا المتاحة</h2>
+
+    <div class="products">
+
+        <!-- الصف الأول -->
+        <div class="card">
+            <div class="icon">🎮</div>
+            <h3>PUBG Mobile</h3>
+            <p>شحن شدات ببجي</p>
+            <div class="price">تواصل للسعر</div>
+            <a class="btn" href="https://wa.me/963934622720" target="_blank"><i class="fab fa-whatsapp"></i> اطلب</a>
         </div>
 
-        <!-- تطبيقات الدردشة والتواصل -->
-        <div class="section-title">
-            <span>💬</span>
-            <h2>تطبيقات الدردشة والتواصل الاجتماعي</h2>
-        </div>
-        <div class="grid">
-            <div class="card">
-                <h3>يلا لودو / يلا شات</h3>
-                <p>شحن ذهب وعملات يلا وتفعيل كافة ميزات الغرف الصوتية والشحن الفوري.</p>
-            </div>
-            <div class="card">
-                <h3>تانجو وسول شيل</h3>
-                <p>شحن جواهر برامج البث المباشر والدردشة وتعبئة الحسابات بكل سهولة.</p>
-            </div>
-            <div class="card">
-                <h3>ياهو وباقي التطبيقات</h3>
-                <p>تعبئة وشحن الحسابات والرصيد الرقمي لتطبيقات وبرامج الدردشة الأخرى.</p>
-            </div>
+        <div class="card">
+            <div class="icon">🔥</div>
+            <h3>Free Fire</h3>
+            <p>شحن جواهر فوري</p>
+            <div class="price">تواصل للسعر</div>
+            <a class="btn" href="https://wa.me/963934622720" target="_blank"><i class="fab fa-whatsapp"></i> اطلب</a>
         </div>
 
-        <!-- البطاقات والعملات الرقمية -->
-        <div class="section-title">
-            <span>💳</span>
-            <h2>البطاقات الرقمية و USDT</h2>
-        </div>
-        <div class="grid">
-            <div class="card">
-                <h3>جوجل بلاي وآب ستور (إيتونز)</h3>
-                <p>بطاقات هدايا متاجر التطبيقات لمختلف الدول والفئات.</p>
-            </div>
-            <div class="card">
-                <h3>بطاقات الألعاب الرقمية</h3>
-                <p>بطاقات ستيم، بلايستيشن، إكس بوكس، ريزر غولد وغيرها.</p>
-            </div>
-            <div class="card">
-                <h3>عملات USDT الرقمية</h3>
-                <p>خدمة بيع وشحن عملات التيذر الرقمية بكل أمان وسرعة.</p>
-            </div>
+        <div class="card">
+            <div class="icon">👑</div>
+            <h3>Mobile Legends</h3>
+            <p>شحن جواهر اللعبة</p>
+            <div class="price">تواصل للسعر</div>
+            <a class="btn" href="https://wa.me/963934622720" target="_blank"><i class="fab fa-whatsapp"></i> اطلب</a>
         </div>
 
-        <!-- رصيد الخطوط المحلية -->
-        <div class="section-title">
-            <span>📱</span>
-            <h2>شحن رصيد الخطوط المحلية</h2>
-        </div>
-        <div class="grid">
-            <div class="card">
-                <h3>خطوط MTN سوريا</h3>
-                <p>تحويل رصيد وشحن خطوط إم تي إن الفورية بكل سهولة.</p>
-            </div>
-            <div class="card">
-                <h3>خطوط سيريتل (Syriatel)</h3>
-                <p>إرسال رصيد ووحدات لخطوط سيريتل بأفضل أسعار التحويل.</p>
-            </div>
+        <!-- الصف الثاني -->
+        <div class="card">
+            <div class="icon">⚔️</div>
+            <h3>COD Mobile</h3>
+            <p>شحن نقاط كوود (CP)</p>
+            <div class="price">تواصل للسعر</div>
+            <a class="btn" href="https://wa.me/963934622720" target="_blank"><i class="fab fa-whatsapp"></i> اطلب</a>
         </div>
 
-        <!-- أزرار التواصل -->
-        <div class="contact-section">
-            <h2>تواصل معنا للطلب والشحن الفوري</h2>
-            <div class="buttons-grid">
-                <a href="https://wa.me/9647841992354" target="_blank" class="btn btn-whatsapp">تواصل للشحن </a>
-                <a href="https://wa.me/963934622720" target="_blank" class="btn btn-whatsapp">واتساب الادارة</a>
-                <a href="https://t.me/Kilal2" target="_blank" class="btn btn-telegram">تليجرام</a>
-                <a href="https://www.facebook.com/share/1cFryhD9YD/" target="_blank" class="btn btn-messenger">ماسنجر</a>
-            </div>
+        <div class="card">
+            <div class="icon">🛡️</div>
+            <h3>Clash of Clans</h3>
+            <p>شحن جواهر اللعبة</p>
+            <div class="price">تواصل للسعر</div>
+            <a class="btn" href="https://wa.me/963934622720" target="_blank"><i class="fab fa-whatsapp"></i> اطلب</a>
         </div>
 
-        <!-- التذييل -->
-        <footer>
-            <p>جميع الحقوق محفوظة &copy; 2026 وكالة الشاهين</p>
-        </footer>
+        <div class="card">
+            <div class="icon">🏰</div>
+            <h3>Clash Royale</h3>
+            <p>شحن جواهر وبطاقات</p>
+            <div class="price">تواصل للسعر</div>
+            <a class="btn" href="https://wa.me/963934622720" target="_blank"><i class="fab fa-whatsapp"></i> اطلب</a>
+        </div>
+
+        <!-- الصف الثالث -->
+        <div class="card">
+            <div class="icon">🎵</div>
+            <h3>TikTok</h3>
+            <p>شحن عملات تيك توك</p>
+            <div class="price">تواصل للسعر</div>
+            <a class="btn" href="https://wa.me/963934622720" target="_blank"><i class="fab fa-whatsapp"></i> اطلب</a>
+        </div>
+
+        <div class="card">
+            <div class="icon">🎙️</div>
+            <h3>Bigo Live</h3>
+            <p>شحن ألماس بيجو</p>
+            <div class="price">تواصل للسعر</div>
+            <a class="btn" href="https://wa.me/963934622720" target="_blank"><i class="fab fa-whatsapp"></i> اطلب</a>
+        </div>
+
+        <div class="card">
+            <div class="icon">💎</div>
+            <h3>Yalla Ludo</h3>
+            <p>شحن ألماظ وبارات</p>
+            <div class="price">تواصل للسعر</div>
+            <a class="btn" href="https://wa.me/963934622720" target="_blank"><i class="fab fa-whatsapp"></i> اطلب</a>
+        </div>
+
+        <!-- الصف الرابع -->
+        <div class="card">
+            <div class="icon">📺</div>
+            <h3>Netflix</h3>
+            <p>اشتراكات رسمية</p>
+            <div class="price">تواصل للسعر</div>
+            <a class="btn" href="https://wa.me/963934622720" target="_blank"><i class="fab fa-whatsapp"></i> اطلب</a>
+        </div>
+
+        <div class="card">
+            <div class="icon">🎨</div>
+            <h3>Canva Pro</h3>
+            <p>اشتراك ميزات كاملة</p>
+            <div class="price">تواصل للسعر</div>
+            <a class="btn" href="https://wa.me/963934622720" target="_blank"><i class="fab fa-whatsapp"></i> اطلب</a>
+        </div>
+
+        <div class="card">
+            <div class="icon">🤖</div>
+            <h3>ChatGPT Plus</h3>
+            <p>حسابات الذكاء الاصطناعي</p>
+            <div class="price">تواصل للسعر</div>
+            <a class="btn" href="https://wa.me/963934622720" target="_blank"><i class="fab fa-whatsapp"></i> اطلب</a>
+        </div>
+
     </div>
 
+    <div class="payment">
+        <h2>💳 طرق الدفع المتاحة</h2>
+
+        <div class="payment-methods">
+            <span>💰 شام كاش</span>
+            <span>🌐 USDT</span>
+        </div>
+
+        <p>للطلب والاستفسار الفوري تواصل معنا عبر قنوات التواصل أدناه</p>
+    </div>
+
+    <div class="contact-center">
+        <h3>📞 للشحن والاستفسارات</h3>
+        <div class="contact-links">
+            <a class="contact-btn telegram" href="https://t.me/Kilal2" target="_blank">
+                <i class="fab fa-telegram-plane"></i> تلجرام
+            </a>
+            <a class="contact-btn facebook" href="https://www.facebook.com/share/1cFryhD9YD/" target="_blank">
+                <i class="fab fa-facebook-f"></i> فيسبوك
+            </a>
+            <a class="contact-btn whatsapp-admin" href="https://wa.me/963934622720" target="_blank">
+                <i class="fab fa-whatsapp"></i> رقم الادارة
+            </a>
+            <a class="contact-btn whatsapp-supervisor" href="https://wa.me/9647841992354" target="_blank">
+                <i class="fab fa-whatsapp"></i> رقم المشرف
+            </a>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 وكالة الشاهين — جميع الحقوق محفوظة
+</footer>
+
 </body>
-</html>
+                             </html>
+                             
